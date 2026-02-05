@@ -671,15 +671,23 @@ ANIMAÇÕES FUNCIONAIS (JS ATIVA)
     to { transform: translateX(0); opacity: 1; }
 }
 
+.whatsapp-float i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.whatsapp-float i::before {
+    margin: 0; /* remove traço/offset do ícone */
+}
+
 /* =====================================================
-MOBILE — FINAL DO ARQUIVO (GLOBAL)
+MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
 ===================================================== */
 @media (max-width: 768px) {
 
     /* ==========================================
-       RESET GLOBAL — EVITA SCROLL HORIZONTAL
+       RESET GLOBAL — SEGURANÇA TOTAL
     ========================================== */
-
     html,
     body {
         max-width: 100%;
@@ -687,8 +695,8 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL)
     }
 
     * {
-        max-width: 100%;
         box-sizing: border-box;
+        max-width: 100%;
     }
 
     section,
@@ -698,66 +706,162 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL)
     }
 
     /* ==========================================
-       LAYOUT GERAL
+       MENU → HAMBURGUER
     ========================================== */
+    .menu-section {
+        position: relative;
+    }
 
     .menu-principal {
-        gap: 18px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        display: none;
+        padding: 18px 0;
+    }
+
+    .menu-principal.ativo {
+        display: flex;
+    }
+
+    .menu-hamburguer {
+        display: flex;
         justify-content: center;
+        padding: 14px 0;
+        cursor: pointer;
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .menu-hamburguer span {
+        width: 26px;
+        height: 2px;
+        background: var(--dourado);
+        margin: 4px 0;
+        display: block;
     }
 
-    .cards-atendimentos {
-        grid-template-columns: 1fr;
+    /* ==========================================
+       HERO / CARD INICIAL
+    ========================================== */
+    .hero-card {
+        padding: 0 10px;
+    }
+
+    .titulo-principal {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+        margin-bottom: 28px;
     }
 
     .hero-botoes {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .titulo-principal {
-        font-size: 44px;
-        line-height: 1.15;
+        gap: 14px;
     }
 
     /* ==========================================
-       CARROSSEL — MOBILE GLOBAL
+       GRID GERAL
     ========================================== */
-
-    .carrossel {
-        overflow-x: auto;                 /* swipe */
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-
-        display: flex;
-        gap: 22px;
-
-        padding-left: 10px;
-        padding-right: 10px;
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
     }
 
-    .carrossel::-webkit-scrollbar {
+    /* ==========================================
+       CARD JOVANKA
+       IMAGEM EM CIMA | TEXTO EMBAIXO
+    ========================================== */
+    .secao.fundo1 .container.grid-2 {
+        gap: 32px;
+    }
+
+    .secao.fundo1 .img-jovanka {
+        max-width: 240px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .secao.fundo1 .texto {
+        padding: 0 6px;
+    }
+
+    /* ==========================================
+       ATENDIMENTOS (OK — APENAS AJUSTE GRID)
+    ========================================== */
+    .cards-atendimentos {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    /* ==========================================
+       PRODUTOS — LEITURA MELHORADA
+    ========================================== */
+    .texto-centro {
+        font-size: 15px;
+        padding: 0 8px;
+    }
+
+    .slide {
+        width: 220px;
+    }
+
+    .slide img {
+        height: 300px;
+    }
+
+    /* ==========================================
+       DEPOIMENTOS (OK)
+    ========================================== */
+    .depoimentos blockquote {
+        font-size: 15px;
+    }
+
+    /* ==========================================
+       FORMULÁRIO — VISUALIZAÇÃO COMPLETA
+    ========================================== */
+    .form-wrapper {
+        max-width: 100%;
+    }
+
+    .form-contato {
+        position: relative;
+        padding: 22px 18px;
+    }
+
+    .form-bg {
         display: none;
     }
 
-    .carrossel > * {
-        flex-shrink: 0;                   /* NÃO esmaga slides */
+    /* ==========================================
+       BOTÃO VOLTAR AO TOPO
+    ========================================== */
+    .btn-topo {
+        right: 16px;
+        bottom: 96px;
     }
 
     /* ==========================================
-       IMAGENS — SEGURANÇA GLOBAL
+       WHATSAPP FLUTUANTE
     ========================================== */
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
+    .whatsapp-float {
+        width: 62px;
+        height: 62px;
+        right: 16px;
+        bottom: 24px;
     }
+
+    .whatsapp-float i {
+        font-size: 32px;
+        line-height: 1;
+    }
+
 }
+
