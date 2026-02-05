@@ -672,12 +672,39 @@ ANIMAÇÕES FUNCIONAIS (JS ATIVA)
 }
 
 /* =====================================================
-MOBILE — FINAL DO ARQUIVO
+MOBILE — FINAL DO ARQUIVO (GLOBAL)
 ===================================================== */
 @media (max-width: 768px) {
 
+    /* ==========================================
+       RESET GLOBAL — EVITA SCROLL HORIZONTAL
+    ========================================== */
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    section,
+    .secao,
+    .container {
+        overflow-x: hidden;
+    }
+
+    /* ==========================================
+       LAYOUT GERAL
+    ========================================== */
+
     .menu-principal {
         gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .grid-2 {
@@ -691,9 +718,46 @@ MOBILE — FINAL DO ARQUIVO
 
     .hero-botoes {
         flex-direction: column;
+        align-items: center;
     }
 
     .titulo-principal {
         font-size: 44px;
+        line-height: 1.15;
+    }
+
+    /* ==========================================
+       CARROSSEL — MOBILE GLOBAL
+    ========================================== */
+
+    .carrossel {
+        overflow-x: auto;                 /* swipe */
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+
+        display: flex;
+        gap: 22px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .carrossel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carrossel > * {
+        flex-shrink: 0;                   /* NÃO esmaga slides */
+    }
+
+    /* ==========================================
+       IMAGENS — SEGURANÇA GLOBAL
+    ========================================== */
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 }

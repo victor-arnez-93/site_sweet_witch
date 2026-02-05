@@ -72,7 +72,7 @@ let autoScroll = null;
 
 if (carrossel) {
 
-    const velocidade = 0.6;
+    const velocidade = 1.5;
 
     // DUPLICA SLIDES
     const slides = [...carrossel.children];
