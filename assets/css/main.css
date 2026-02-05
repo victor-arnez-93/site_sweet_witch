@@ -492,14 +492,65 @@ PRODUTOS — CARROSSEL FUNCIONAL E PADRONIZADO
 }
 
 /* =====================================================
-DEPOIMENTOS
+DEPOIMENTOS — CARDS E CARROSSEL
 ===================================================== */
-.depoimentos blockquote {
-    background: rgba(0,0,0,.6);
-    border-left: 4px solid var(--dourado);
-    padding: 22px;
-    margin-bottom: 18px;
+
+.depoimentos-carrossel {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 6px;
+}
+
+.depoimentos-carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.depoimento-card {
+    flex: 0 0 320px;
+    background: rgba(0,0,0,.55);
+    border-left: 3px solid var(--dourado);
+    border-radius: 14px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.depoimento-texto {
     font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cinza);
+}
+
+.texto-completo {
+    display: none;
+}
+
+.depoimento-card.expandido .texto-completo {
+    display: inline;
+}
+
+.depoimento-card.expandido .reticencias {
+    display: none;
+}
+
+.btn-expandir {
+    margin-top: 14px;
+    align-self: flex-start;
+    background: transparent;
+    border: none;
+    color: var(--dourado);
+    font-family: var(--font-titulo);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+}
+
+.btn-expandir:hover {
+    text-shadow: 0 0 8px rgba(223,175,69,.6);
 }
 
 /* =====================================================
@@ -784,11 +835,27 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
     }
 
     /* ==========================================
-       CARD JOVANKA
-       IMAGEM EM CIMA | TEXTO EMBAIXO
+       CARD JOVANKA — MOBILE CORRETO
     ========================================== */
     .secao.fundo1 .container.grid-2 {
-        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .secao.fundo1 .titulo-secao {
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .secao.fundo1 .cargo {
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    .secao.fundo1 .imagem {
+        order: 2;
     }
 
     .secao.fundo1 .img-jovanka {
@@ -798,7 +865,9 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
     }
 
     .secao.fundo1 .texto {
-        padding: 0 6px;
+        order: 3;
+        padding: 0 8px;
+        text-align: justify;
     }
 
     /* ==========================================
@@ -840,13 +909,16 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
     }
 
     .form-contato {
-        position: relative;
-        padding: 22px 18px;
+        position: absolute;
+        inset: 0;
+        padding: 20px 16px;
     }
 
     .form-bg {
-        display: none;
+        display: block;
+        border-radius: 18px;
     }
+
 
     /* ==========================================
        BOTÃO VOLTAR AO TOPO

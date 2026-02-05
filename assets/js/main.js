@@ -112,6 +112,19 @@ if (carrossel) {
 }
 
 /* =================================================
+   DEPOIMENTOS — EXPANDIR TEXTO
+================================================= */
+document.querySelectorAll(".btn-expandir").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const card = btn.closest(".depoimento-card");
+        card.classList.toggle("expandido");
+        btn.textContent = card.classList.contains("expandido")
+            ? "Ler menos"
+            : "Ler mais";
+    });
+});
+
+/* =================================================
    MENU HAMBURGUER — MOBILE
 ================================================= */
 const menuHamburguer = document.querySelector(".menu-hamburguer");
