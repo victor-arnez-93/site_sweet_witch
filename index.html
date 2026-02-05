@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet Witch | Direcionamento Místico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+HEADER FIXO APENAS PARA LOGO CENTRALIZADA
+FUNDO BRANCO | LOGO MAIOR
+===================================================== -->
+<header class="header-logo">
+    <div class="logo-wrapper">
+        <img src="static/imagens/logo1.png" alt="Sweet Witch" class="logo-central">
+    </div>
+</header>
+
+<!-- =====================================================
+MENU (SEÇÃO 1)
+FUNDO ROXO | BOTÕES CENTRALIZADOS
+===================================================== -->
+<section class="menu-section fundo1">
+    <nav class="menu-principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre-sweet">Sobre</a>
+        <a href="#atendimentos">Atendimentos</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato" class="menu-contato">Contato</a>
+    </nav>
+</section>
+
+<!-- =====================================================
+CARD INICIAL / HERO
+===================================================== -->
+<section id="inicio" class="secao fundo1 anim-fade">
+    <div class="hero-card">
+
+        <h1 class="titulo-principal">
+            Sweet Witch
+        </h1>
+
+        <h2 class="hero-subtitle">
+            Direcionamento Místico · Espiritualidade · Autoconhecimento
+        </h2>
+
+        <p class="hero-text">
+            Um espaço de reconexão, acolhimento e direcionamento consciente,
+            respeitando a jornada individual de cada pessoa.
+        </p>
+
+        <div class="hero-botoes">
+            <button id="btnMusic" class="btn-primary btn-atmosfera">
+                <i class="fa-solid fa-music"></i>
+                Ativar atmosfera
+            </button>
+
+            <a href="https://wa.me/5511971125795" target="_blank" class="btn-primary btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <!-- ÁUDIO -->
+    <audio id="audioAmbient">
+        <source src="static/music/music.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<!-- =====================================================
+SOBRE A SWEET WITCH
+IMAGEM DIREITA | TEXTO ESQUERDA
+===================================================== -->
+<section id="sobre-sweet" class="secao fundo2 anim-slide-left">
+    <div class="container grid-2">
+
+        <div class="texto">
+            <h2 class="titulo-secao">Sobre a <span class="dourado">Sweet Witch</span></h2>
+
+            <p>
+                A Sweet Witch nasce da vivência, da escuta profunda e do respeito
+                aos caminhos individuais. Não se trata de imposição espiritual,
+                mas de direcionamento sensível e consciente.
+            </p>
+
+            <p>
+                Cada atendimento é conduzido de forma única, respeitando limites,
+                crenças e necessidades. O sagrado aqui é acolhimento, não rótulo.
+            </p>
+        </div>
+
+        <div class="imagem">
+            <img src="static/imagens/imgsobre.png" alt="Sweet Witch">
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+CARD JOVANKA
+IMAGEM ESQUERDA | TEXTO DIREITA
+===================================================== -->
+<section class="secao fundo1 anim-slide-up">
+    <div class="container grid-2">
+
+        <div class="imagem">
+            <img src="static/imagens/jovanka.png" alt="Jovanka Buratto" class="img-jovanka">
+        </div>
+
+        <div class="texto">
+            <h2 class="titulo-secao">Jovanka Buratto</h2>
+            <span class="cargo">Coach · Mística · Taróloga</span>
+
+            <p>
+                Nascida em Atibaia, aos 4 anos de idade já despontava para a espiritualidade
+                com audição e visão aguçadas.
+            </p>
+
+            <p>
+                Sempre muito interessada em ajudar as pessoas nas dores da carne e da alma.
+            </p>
+
+            <p>
+                Hoje, de forma holística, direciona pessoas com tarot sério e eficaz,
+                além de produzir produtos aromaterápicos, espirituais e energéticos,
+                transformando vidas e promovendo bem-estar.
+            </p>
+
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/jovanka-buratto-50a567369/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/sweetwitch/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+ATENDIMENTOS
+TÍTULOS FORA DOS CARDS
+===================================================== -->
+<section id="atendimentos" class="secao fundo2 anim-fade">
+    <div class="container">
+
+        <h2 class="titulo-secao">Atendimentos</h2>
+
+        <div class="cards-atendimentos">
+
+            <div class="card-atendimento">
+                <h3 class="titulo-card">Tarot Terapêutico</h3>
+                <div class="card-imagem">
+                    <img src="static/imagens/atend1.png" alt="Tarot Terapêutico">
+                    <div class="overlay">
+                        <p>
+                            Leitura ética, profunda e objetiva para questões emocionais,
+                            espirituais e práticas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-atendimento">
+                <h3 class="titulo-card">Mapa Astral Cármico</h3>
+                <div class="card-imagem">
+                    <img src="static/imagens/atend2.png" alt="Mapa Astral Cármico">
+                    <div class="overlay">
+                        <p>
+                            Compreensão dos padrões da alma, aprendizados e desafios energéticos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-atendimento">
+                <h3 class="titulo-card">Orientações Personalizadas</h3>
+                <div class="card-imagem">
+                    <img src="static/imagens/atend3.png" alt="Orientações Personalizadas">
+                    <div class="overlay">
+                        <p>
+                            Atendimento individual respeitando crenças, limites e necessidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+PRODUTOS ENERGÉTICOS — CARROSSEL / VITRINE
+===================================================== -->
+<section id="produtos" class="secao fundo1 anim-slide-up">
+    <div class="container">
+
+        <h2 class="titulo-secao">Produtos Energéticos</h2>
+
+        <p class="texto-centro">
+            Produtos preparados de forma personalizada, respeitando a necessidade energética,
+            espiritual e emocional de cada pessoa.
+        </p>
+
+        <p class="texto-centro destaque">
+            Valores podem variar conforme essência, intenção e composição.
+            Para informações detalhadas, o atendimento é feito diretamente via WhatsApp.
+        </p>
+
+        <div class="carrossel">
+
+            <!-- IMAGENS img1 até img19 -->
+            <div class="slide"><img src="static/imagens/img1.png"><span>Sprays energéticos personalizados</span></div>
+            <div class="slide"><img src="static/imagens/img2.png"><span>Óleos corporais e essências</span></div>
+            <div class="slide"><img src="static/imagens/img3.png"><span>Velas ritualísticas</span></div>
+            <div class="slide"><img src="static/imagens/img4.png"><span>Sabonetes energéticos</span></div>
+            <div class="slide"><img src="static/imagens/img5.png"><span>Aromatizadores de ambiente</span></div>
+            <div class="slide"><img src="static/imagens/img6.png"><span>Produtos para prosperidade</span></div>
+            <div class="slide"><img src="static/imagens/img7.png"><span>Produtos para amor e equilíbrio</span></div>
+            <div class="slide"><img src="static/imagens/img8.png"><span>Essências especiais</span></div>
+            <div class="slide"><img src="static/imagens/img9.png"><span>Kits personalizados</span></div>
+            <div class="slide"><img src="static/imagens/img10.png"><span>Produtos artesanais</span></div>
+            <div class="slide"><img src="static/imagens/img11.png"><span>Produtos energéticos diversos</span></div>
+            <div class="slide"><img src="static/imagens/img13.png"><span>Combinações personalizadas</span></div>
+            <div class="slide"><img src="static/imagens/img14.png"><span>Aromas terapêuticos</span></div>
+            <div class="slide"><img src="static/imagens/img15.png"><span>Produtos sob medida</span></div>
+            <div class="slide"><img src="static/imagens/img16.png"><span>Essências naturais</span></div>
+            <div class="slide"><img src="static/imagens/img17.png"><span>Produtos de proteção</span></div>
+            <div class="slide"><img src="static/imagens/img18.png"><span>Produtos espirituais</span></div>
+            <div class="slide"><img src="static/imagens/img19.png"><span>Vitrine energética Sweet Witch</span></div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+DEPOIMENTOS
+===================================================== -->
+<section id="depoimentos" class="secao fundo2 anim-fade">
+    <div class="container">
+
+        <h2 class="titulo-secao">Depoimentos</h2>
+
+        <div class="depoimentos">
+            <blockquote>“Atendimento sério, acolhedor e extremamente respeitoso.”</blockquote>
+            <blockquote>“Os produtos têm uma energia perceptível.”</blockquote>
+            <blockquote>“Direcionamento consciente e humano.”</blockquote>
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+CONTATO
+===================================================== -->
+<section id="contato" class="secao fundo1 anim-slide-left">
+    <div class="container">
+
+        <h2 class="titulo-secao">Contato</h2>
+
+        <div class="form-wrapper">
+            <img src="static/imagens/imgform.png" alt="Contato Sweet Witch" class="form-bg">
+
+            <form class="form-contato">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+
+                <button type="submit" class="btn-primary btn-atmosfera">
+                    Enviar mensagem
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer footer-flex">
+
+    <div class="footer-banner">
+        <img src="static/imagens/banner1.jpg" alt="Sweet Witch">
+    </div>
+
+    <div class="footer-info">
+        <p>© Sweet Witch — Todos os direitos reservados</p>
+        <p>Desenvolvido por <a href="https://crvsolucoesti.com" target="_blank">CRV Soluções em TI</a></p>
+    </div>
+
+</footer>
+
+<!-- BOTÕES FLUTUANTES -->
+<button id="btnTopo" class="btn-topo"><i class="fa-solid fa-arrow-up"></i></button>
+<a href="https://wa.me/5511971125795" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
