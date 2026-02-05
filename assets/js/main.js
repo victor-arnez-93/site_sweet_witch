@@ -63,18 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animatedSections.forEach(sec => observer.observe(sec));
 
-    /* =================================================
-       CARROSSEL
-    ================================================= */
+/* =================================================
+   CARROSSEIS — PRODUTOS + DEPOIMENTOS
+================================================= */
 
-const carrossel = document.querySelector(".carrossel");
-let autoScroll = null;
+const carrosseis = document.querySelectorAll(".carrossel, .depoimentos-carrossel");
 
-if (carrossel) {
+carrosseis.forEach(carrossel => {
 
-    const velocidade = 1.5;
+    let autoScroll = null;
+    const velocidade = carrossel.classList.contains("depoimentos-carrossel")
+        ? 0.6   // mais lento para leitura
+        : 1.5;  // produtos
 
-    // DUPLICA SLIDES
+    // DUPLICA SLIDES (loop infinito)
     const slides = [...carrossel.children];
     slides.forEach(slide => {
         carrossel.appendChild(slide.cloneNode(true));
@@ -107,21 +109,8 @@ if (carrossel) {
     carrossel.addEventListener("touchstart", pararAutoScroll, { passive: true });
     carrossel.addEventListener("touchend", iniciarAutoScroll);
 
-    // ⏱️ AGUARDA IMAGENS
+    // Aguarda imagens
     window.addEventListener("load", iniciarAutoScroll);
-}
-
-/* =================================================
-   DEPOIMENTOS — EXPANDIR TEXTO
-================================================= */
-document.querySelectorAll(".btn-expandir").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const card = btn.closest(".depoimento-card");
-        card.classList.toggle("expandido");
-        btn.textContent = card.classList.contains("expandido")
-            ? "Ler menos"
-            : "Ler mais";
-    });
 });
 
 /* =================================================
