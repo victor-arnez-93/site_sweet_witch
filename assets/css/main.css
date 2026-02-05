@@ -912,6 +912,8 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
     .form-bg {
         width: 100%;
         height: auto;
+        min-height: 520px;   
+        object-fit: cover;
         display: block;
         border-radius: 18px;
     }
