@@ -114,6 +114,32 @@ carrosseis.forEach(carrossel => {
 });
 
 /* =================================================
+   DEPOIMENTOS — PAUSAR CARROSSEL AO EXPANDIR
+================================================= */
+document.addEventListener("click", function (e) {
+    const botao = e.target.closest(".btn-expandir");
+    if (!botao) return;
+
+    const card = botao.closest(".depoimento-card");
+    if (!card) return;
+
+    const carrossel = card.closest(".depoimentos-carrossel");
+    if (!carrossel) return;
+
+    card.classList.toggle("expandido");
+
+    const expandido = card.classList.contains("expandido");
+    botao.textContent = expandido ? "Ler menos" : "Ler mais";
+
+    /* pausa / retoma autoplay */
+    if (expandido) {
+        carrossel.dispatchEvent(new Event("mouseenter"));
+    } else {
+        carrossel.dispatchEvent(new Event("mouseleave"));
+    }
+});
+
+/* =================================================
    MENU HAMBURGUER — MOBILE
 ================================================= */
 const menuHamburguer = document.querySelector(".menu-hamburguer");

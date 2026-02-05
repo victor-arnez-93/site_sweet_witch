@@ -905,20 +905,33 @@ MOBILE — FINAL DO ARQUIVO (GLOBAL / REVISADO)
        FORMULÁRIO — VISUALIZAÇÃO COMPLETA
     ========================================== */
     .form-wrapper {
+        position: relative;
         max-width: 100%;
     }
 
-    .form-contato {
-        position: absolute;
-        inset: 0;
-        padding: 20px 16px;
-    }
-
     .form-bg {
+        width: 100%;
+        height: auto;
         display: block;
         border-radius: 18px;
     }
 
+    .form-contato {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+
+        padding: 20px 18px;
+        background: rgba(0,0,0,.28);
+        border-radius: 18px;
+    }
 
     /* ==========================================
        BOTÃO VOLTAR AO TOPO
