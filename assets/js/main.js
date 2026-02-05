@@ -111,6 +111,25 @@ if (carrossel) {
     window.addEventListener("load", iniciarAutoScroll);
 }
 
+/* =================================================
+   MENU HAMBURGUER — MOBILE
+================================================= */
+const menuHamburguer = document.querySelector(".menu-hamburguer");
+const menuPrincipal = document.querySelector(".menu-principal");
+
+if (menuHamburguer && menuPrincipal) {
+    menuHamburguer.addEventListener("click", () => {
+        menuPrincipal.classList.toggle("ativo");
+    });
+
+    // Fecha ao clicar em link
+    menuPrincipal.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menuPrincipal.classList.remove("ativo");
+        });
+    });
+}
+
     /* =================================================
        BOTÃO VOLTAR AO TOPO
     ================================================= */
